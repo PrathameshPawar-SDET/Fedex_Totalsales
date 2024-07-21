@@ -1,4 +1,4 @@
-package fedex_totalsales;
+package fedex_totalsales.Utilities;
 
 import java.net.MalformedURLException;
 

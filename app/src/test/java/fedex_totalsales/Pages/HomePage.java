@@ -1,10 +1,13 @@
 package fedex_totalsales.Pages;
 
+import fedex_totalsales.Utilities.Wrapper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+
+import javax.xml.xpath.XPath;
 
 public class HomePage {
     WebDriver driver;
@@ -13,6 +16,8 @@ public class HomePage {
         this.driver = driver;
         PageFactory.initElements(new AjaxElementLocatorFactory(driver,10), this);
     }
+
+    String homeURL = "https://fedex-staging.totalsales.com/";
 
     @FindBy(xpath = "//a[text()='HOME']")
     private  WebElement Home;
@@ -52,6 +57,42 @@ public class HomePage {
 
     @FindBy(xpath = "//input[@placeholder='SEARCH']")
     private WebElement Search;
+
+    @FindBy(className = "input-group-addon")
+    private WebElement SearchButton;
+
+    @FindBy(xpath="//a[text()='HELP ME']")
+    private WebElement helpMe;
+
+    @FindBy(xpath = "//a[text()='VIEW CART']")
+    private WebElement viewCart;
+
+    public void navigationToHome(){
+        Wrapper.navigate(driver,homeURL);
+    }
+
+    public void searchProduct(String Product) throws InterruptedException{
+        Search.clear();
+        Thread.sleep(3000);
+        Wrapper.sendKeys(driver, this.Search, Product);
+    }
+
+    public void SearchButton(){
+        Wrapper.click(this.SearchButton, driver);
+    }
+
+    public void helpme(){
+        Wrapper.click(this.helpMe,driver);
+    }
+
+
+
+
+
+
+
+
+
 
 
 

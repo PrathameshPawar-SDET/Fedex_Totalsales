@@ -1,6 +1,6 @@
 # Ignore Gradle project-specific cache directory
 .gradle
-app/src/test/java/fedex_totalsales/Data
+
 
 
 # Ignore Gradle build output directory

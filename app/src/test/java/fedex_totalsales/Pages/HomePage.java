@@ -85,6 +85,10 @@ public class HomePage {
         Wrapper.click(this.helpMe,driver);
     }
 
+    public void navigatetoSALogin(){
+        Wrapper.click(this.SALogin, driver);
+    }
+
 
 
 

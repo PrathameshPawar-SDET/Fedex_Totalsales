@@ -48,7 +48,7 @@ tasks.named('test') {
     // Use TestNG for unit tests.
     useTestNG() {
         useDefaultListeners = true // generates the test report
-        suites "/src/test/java/qtriptest/testng.xml"
+        suites "/src/test/java/fedex_totalsales/testng.xml"
     }
 
     afterSuite { desc, result ->

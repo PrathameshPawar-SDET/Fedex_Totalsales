@@ -6,6 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class superAdminLogin {
 
@@ -30,6 +35,12 @@ public class superAdminLogin {
 
     @FindBy(className = "help-block")
     private WebElement errorMessage;
+
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+    public boolean isheaderdisplayed() {
+        wait.until(ExpectedConditions.visibilityOf(SALoginHeader));
+        return this.SALoginHeader.isDisplayed();
+    }
 
     public void enterCredentials(String username, String password){
         Wrapper.sendKeys(driver,this.Username, username);

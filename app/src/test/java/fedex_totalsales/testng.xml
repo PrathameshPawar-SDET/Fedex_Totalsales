@@ -2,17 +2,14 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Testing for QTrip">
     <test name="Test Execution using testng">
-        <!-- <groups>
+        <groups>
            <run>
-             <include name = "Login Flow"></include>
-             <include name = "Search and Filter flow"></include>
-             <include name = "Booking and Cancellation Flow"></include>
-             <include name = "Reliability Flow"></include>
+             <include name = "sanity"></include>
            </run>
-       </groups> -->
+       </groups>
 
         <classes>
-            <class name=""/>
+            <class name="fedex_totalsales.Tests.loginWithCredentials"/>
         </classes>
     </test>
 </suite>

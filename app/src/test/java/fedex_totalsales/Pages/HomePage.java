@@ -67,6 +67,15 @@ public class HomePage {
     @FindBy(xpath = "//a[text()='VIEW CART']")
     private WebElement viewCart;
 
+    @FindBy(xpath = "//a[normalize-space()='My Account']")
+    private WebElement myAccount;
+
+    @FindBy(xpath = "//a[normalize-space()='Logout']")
+    private WebElement logout;
+
+    @FindBy(xpath = "//p[contains(text(), 'Employee Number:')]")
+    private WebElement Employee_text;
+
     public void navigationToHome(){
         Wrapper.navigate(driver,homeURL);
     }
@@ -87,6 +96,15 @@ public class HomePage {
 
     public void navigatetoSALogin(){
         Wrapper.click(this.SALogin, driver);
+    }
+
+    public boolean verifylogin(){
+        return this.Employee_text.isDisplayed();
+    }
+
+    public void logout(){
+        this.myAccount.click();
+        this.logout.click();
     }
 
 

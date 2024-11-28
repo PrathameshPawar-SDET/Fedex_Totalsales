@@ -28,7 +28,7 @@ public class DP {
         // FileInputStream excelFile = new FileInputStream(new File(
         //         "<absolute-path-to-xlsx-file>"));
         FileInputStream excelFile = new FileInputStream(new File(
-                "D:\\Crio assignment\\Projects\\Fedex_Totalsales\\app\\src\\test\\java\\fedex_totalsales\\Data\\DatasetsforQTrip.xlsx"));
+                "D:\\Crio assignment\\Projects\\Fedex_Totalsales\\app\\src\\test\\java\\fedex_totalsales\\Data\\DatasetsforFedex.xlsx"));
 
         XSSFWorkbook workbook = new XSSFWorkbook(excelFile);
         XSSFSheet selectedSheet = workbook.getSheet(m.getName());
@@ -43,7 +43,13 @@ public class DP {
                     if (cell.getCellType() == CellType.STRING) {
                         innerList.add(cell.getStringCellValue());
                     } else if (cell.getCellType() == CellType.NUMERIC) {
-                        innerList.add(String.valueOf(cell.getNumericCellValue()));
+                        String cellValue = String.valueOf(cell.getNumericCellValue());
+
+                        if (cellValue.endsWith(".0")) {
+                            cellValue = cellValue.substring(0, cellValue.length() - 2);
+                        }
+
+                        innerList.add(cellValue);
                     }
                 }
                 cellIndex = cellIndex + 1;

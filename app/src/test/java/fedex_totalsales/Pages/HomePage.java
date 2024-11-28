@@ -18,6 +18,8 @@ public class HomePage {
     }
 
     String homeURL = "https://fedex-staging.totalsales.com/";
+//    String homeURL = "https://fedexdev.totalsales.com/";
+
 
     @FindBy(xpath = "//a[text()='HOME']")
     private  WebElement Home;

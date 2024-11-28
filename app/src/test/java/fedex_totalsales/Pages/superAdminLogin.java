@@ -1,6 +1,7 @@
 package fedex_totalsales.Pages;
 
 import fedex_totalsales.Utilities.Wrapper;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,8 +39,14 @@ public class superAdminLogin {
 
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     public boolean isheaderdisplayed() {
-        wait.until(ExpectedConditions.visibilityOf(SALoginHeader));
-        return this.SALoginHeader.isDisplayed();
+        try {
+            wait.until(ExpectedConditions.visibilityOf(SALoginHeader));
+            return this.SALoginHeader.isDisplayed();
+        }
+        catch(NoSuchElementException e){
+            return false;
+
+        }
     }
 
     public void enterCredentials(String username, String password){

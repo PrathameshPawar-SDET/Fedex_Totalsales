@@ -8,11 +8,8 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
+
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -30,6 +27,7 @@ public class BaseTest {
         driver = DriverSingleton.getdriver();
         reports = ReportSingleton.getReport();
         driver.get("https://fedex-staging.totalsales.com/");
+//        driver.get("https://fedexdev.totalsales.com/");
         Thread.sleep(2000);
     }
 
@@ -43,6 +41,14 @@ public class BaseTest {
 //
 //    }
 
+    @AfterMethod(alwaysRun = true)
+    public void afterMethod() {
+        if (test != null) {
+            test.log(LogStatus.INFO, "Test execution completed.");
+            reports.endTest(test);  // End the test in the report
+        }
+    }
+
     @AfterSuite(alwaysRun = true)
     public void teardownSuite() {
         captureScreenshot("EndOfTest");
@@ -50,8 +56,13 @@ public class BaseTest {
             driver.quit();
         }
         if (reports != null) {
-            reports.flush();
-            reports.close();
+            try {
+                reports.flush();
+                reports.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+                test.log(LogStatus.ERROR, "Error while closing ExtentReports: " + e.getMessage());
+            }
         }
     }
 

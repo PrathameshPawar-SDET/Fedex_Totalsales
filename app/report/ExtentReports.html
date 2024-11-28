@@ -42,7 +42,6 @@ ExtentReports 2.0
 </div>
 <ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 <li class='analysis waves-effect active'><a href='#!' class='test-view' onclick="_updateCurrentStage(0)"><i class='mdi-action-dashboard'></i>Test Details</a></li>
-<li class='analysis waves-effect'><a href='#!' class='exceptions-view' onclick="_updateCurrentStage(2)"><i class='mdi-action-bug-report'></i>Exceptions</a></li>
 <li class='analysis waves-effect'><a href='#!' class='dashboard-view'><i class='mdi-action-track-changes'></i></i>Analysis</a></li>
 </ul>
 <span class='report-name'>Automation Report</span> <span class='report-headline'></span>
@@ -51,7 +50,7 @@ ExtentReports 2.0
 <i class='mdi-hardware-desktop-windows'></i>
 </li>
 <li>
-<span class='suite-started-time'>2024-11-28 01:02:24</span>
+<span class='suite-started-time'>2024-11-28 23:42:44</span>
 </li>
 <li>
 <span>v2.40.2</span>
@@ -81,25 +80,25 @@ ExtentReports 2.0
 <div class='col l2 m4 s12'>
 <div class='card suite-total-time-current'> 
 <span class='panel-name'>Total Time Taken (Current Run)</span> 
-<span class='suite-total-time-current-value panel-lead'>0h 2m 9s+603ms</span> 
+<span class='suite-total-time-current-value panel-lead'>0h 1m 32s+823ms</span> 
 </div> 
 </div>
 <div class='col l2 m4 s12'>
 <div class='card suite-total-time-overall'> 
 <span class='panel-name'>Total Time Taken (Overall)</span> 
-<span class='suite-total-time-overall-value panel-lead'>0h 2m 9s+603ms</span> 
+<span class='suite-total-time-overall-value panel-lead'>0h 1m 32s+823ms</span> 
 </div> 
 </div>
 <div class='col l2 m4 s6 suite-start-time'>
 <div class='card accent green-accent'> 
 <span class='panel-name'>Start</span> 
-<span class='panel-lead suite-started-time'>2024-11-28 01:00:14</span> 
+<span class='panel-lead suite-started-time'>2024-11-28 23:41:11</span> 
 </div> 
 </div>
 <div class='col l2 m4 s6 suite-end-time'>
 <div class='card accent pink-accent'> 
 <span class='panel-name'>End</span> 
-<span class='panel-lead suite-ended-time'>2024-11-28 01:02:24</span> 
+<span class='panel-lead suite-ended-time'>2024-11-28 23:42:44</span> 
 </div> 
 </div>
 </div>
@@ -228,17 +227,17 @@ ExtentReports 2.0
 <div class='card-panel no-padding-h no-padding-v no-margin-v'>
 <div class='wrapper'>
 <ul id='test-collection' class='test-collection'>
-<li class='collection-item test displayed active fail ' extentid='bc6cdcbc-fde4-43b3-81d5-f4e470cd98fb'>
+<li class='collection-item test displayed active pass ' extentid='f1817e0f-bc81-4c9d-b0dc-363a83859dfb'>
 <div class='test-head'>
-<span class='test-name'>testcase01 - Verify login flow <i class='tooltipped mdi-alert-error' data-position='top' data-delay='50' data-tooltip='Close was called before test could end safely using EndTest.'></i></span>
-<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='test-name'>testcase01 - Verify login flow </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
 <span class='category-assigned hide '></span>
 </div>
 <div class='test-body'>
 <div class='test-info'>
-<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 01:00:24</span>
-<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 01:02:24</span>
-<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 59s+337ms</span>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 23:41:23</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 23:41:35</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 11s+998ms</span>
 </div>
 <div class='test-desc'></div>
 <div class='test-attributes'>
@@ -255,79 +254,43 @@ ExtentReports 2.0
 <tbody>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:00:24</td>
+<td class='timestamp'>23:41:23</td>
 <td class='step-details'>Navigating to Homepage</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:00:24</td>
+<td class='timestamp'>23:41:23</td>
 <td class='step-details'>Navigating to Login page</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:00:30</td>
+<td class='timestamp'>23:41:30</td>
 <td class='step-details'>Login Header is displayed, proceeding with login</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:00:33</td>
-<td class='step-details'>Login successfull for user: owenc</td>
+<td class='timestamp'>23:41:33</td>
+<td class='step-details'>Calling verifylogin method for user: owenc</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:41:33</td>
+<td class='step-details'>Login successful for user: owenc</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:00:35</td>
+<td class='timestamp'>23:41:35</td>
 <td class='step-details'>Logged out successfully</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:00:35</td>
+<td class='timestamp'>23:41:35</td>
 <td class='step-details'>Moving on to the next credentials</td>
 </tr>
 <tr>
-<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-<td class='timestamp'>01:02:24</td>
-<td class='step-details'><pre>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:41:35</td>
+<td class='step-details'>Test execution completed.</td>
 </tr>
 </tbody>
 </table>
@@ -336,17 +299,17 @@ at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerM
 </div>
 </div>
 </li>
-<li class='collection-item test displayed active fail ' extentid='ac465538-0906-4d7d-a344-73aa559c3c3f'>
+<li class='collection-item test displayed active pass ' extentid='a4e759be-5e08-4af2-ac3b-9d360a4f9526'>
 <div class='test-head'>
-<span class='test-name'>testcase01 - Verify login flow <i class='tooltipped mdi-alert-error' data-position='top' data-delay='50' data-tooltip='Close was called before test could end safely using EndTest.'></i></span>
-<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='test-name'>testcase01 - Verify login flow </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
 <span class='category-assigned hide '></span>
 </div>
 <div class='test-body'>
 <div class='test-info'>
-<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 01:00:35</span>
-<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 01:02:24</span>
-<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 48s+785ms</span>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 23:41:35</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 23:41:42</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 7s+175ms</span>
 </div>
 <div class='test-desc'></div>
 <div class='test-attributes'>
@@ -363,74 +326,43 @@ at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerM
 <tbody>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:00:35</td>
+<td class='timestamp'>23:41:35</td>
 <td class='step-details'>Navigating to Homepage</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:00:35</td>
+<td class='timestamp'>23:41:35</td>
 <td class='step-details'>Navigating to Login page</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:00:37</td>
+<td class='timestamp'>23:41:37</td>
 <td class='step-details'>Login Header is displayed, proceeding with login</td>
 </tr>
 <tr>
-<td class='status error' title='error' alt='error'><i class='mdi-alert-error'></i></td>
-<td class='timestamp'>01:01:00</td>
-<td class='step-details'>Exception occurred for user: 2436786.0 - Timed out after 10 seconds. Unable to locate the element</td>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:41:40</td>
+<td class='step-details'>Calling verifylogin method for user: 2436786</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:41:40</td>
+<td class='step-details'>Login successful for user: 2436786</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:00</td>
+<td class='timestamp'>23:41:42</td>
+<td class='step-details'>Logged out successfully</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:41:42</td>
 <td class='step-details'>Moving on to the next credentials</td>
 </tr>
 <tr>
-<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-<td class='timestamp'>01:02:24</td>
-<td class='step-details'><pre>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:41:42</td>
+<td class='step-details'>Test execution completed.</td>
 </tr>
 </tbody>
 </table>
@@ -439,17 +371,17 @@ at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerM
 </div>
 </div>
 </li>
-<li class='collection-item test displayed active fail ' extentid='71305b25-9b14-43da-a84f-d772d4ea6022'>
+<li class='collection-item test displayed active pass ' extentid='4d81fe28-301f-44bd-bf44-4f44b2361e31'>
 <div class='test-head'>
-<span class='test-name'>testcase01 - Verify login flow <i class='tooltipped mdi-alert-error' data-position='top' data-delay='50' data-tooltip='Close was called before test could end safely using EndTest.'></i></span>
-<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='test-name'>testcase01 - Verify login flow </span>
+<span class='test-status label right outline capitalize pass'>pass</span>
 <span class='category-assigned hide '></span>
 </div>
 <div class='test-body'>
 <div class='test-info'>
-<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 01:01:00</span>
-<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 01:02:24</span>
-<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 1m 23s+379ms</span>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 23:41:42</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 23:41:49</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 6s+721ms</span>
 </div>
 <div class='test-desc'></div>
 <div class='test-attributes'>
@@ -466,74 +398,43 @@ at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerM
 <tbody>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:00</td>
+<td class='timestamp'>23:41:42</td>
 <td class='step-details'>Navigating to Homepage</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:02</td>
+<td class='timestamp'>23:41:42</td>
 <td class='step-details'>Navigating to Login page</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:04</td>
+<td class='timestamp'>23:41:44</td>
 <td class='step-details'>Login Header is displayed, proceeding with login</td>
 </tr>
 <tr>
-<td class='status error' title='error' alt='error'><i class='mdi-alert-error'></i></td>
-<td class='timestamp'>01:01:27</td>
-<td class='step-details'>Exception occurred for user: 1938256.0 - Timed out after 10 seconds. Unable to locate the element</td>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:41:47</td>
+<td class='step-details'>Calling verifylogin method for user: 1938256</td>
+</tr>
+<tr>
+<td class='status pass' title='pass' alt='pass'><i class='mdi-action-check-circle'></i></td>
+<td class='timestamp'>23:41:47</td>
+<td class='step-details'>Login successful for user: 1938256</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:27</td>
+<td class='timestamp'>23:41:49</td>
+<td class='step-details'>Logged out successfully</td>
+</tr>
+<tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:41:49</td>
 <td class='step-details'>Moving on to the next credentials</td>
 </tr>
 <tr>
-<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-<td class='timestamp'>01:02:24</td>
-<td class='step-details'><pre>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:41:49</td>
+<td class='step-details'>Test execution completed.</td>
 </tr>
 </tbody>
 </table>
@@ -542,17 +443,17 @@ at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerM
 </div>
 </div>
 </li>
-<li class='collection-item test displayed active fail ' extentid='e1334871-72ac-4091-9a70-3f820bbe1690'>
+<li class='collection-item test displayed active error ' extentid='28aeec73-3ff8-4156-8712-d6342af47507'>
 <div class='test-head'>
-<span class='test-name'>testcase01 - Verify login flow <i class='tooltipped mdi-alert-error' data-position='top' data-delay='50' data-tooltip='Close was called before test could end safely using EndTest.'></i></span>
-<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='test-name'>testcase01 - Verify login flow </span>
+<span class='test-status label right outline capitalize error'>error</span>
 <span class='category-assigned hide '></span>
 </div>
 <div class='test-body'>
 <div class='test-info'>
-<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 01:01:27</span>
-<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 01:02:24</span>
-<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 56s+379ms</span>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 23:41:49</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 23:42:15</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 26s+134ms</span>
 </div>
 <div class='test-desc'></div>
 <div class='test-attributes'>
@@ -569,74 +470,38 @@ at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerM
 <tbody>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:27</td>
+<td class='timestamp'>23:41:49</td>
 <td class='step-details'>Navigating to Homepage</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:29</td>
+<td class='timestamp'>23:41:49</td>
 <td class='step-details'>Navigating to Login page</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:31</td>
+<td class='timestamp'>23:41:51</td>
 <td class='step-details'>Login Header is displayed, proceeding with login</td>
 </tr>
 <tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:41:54</td>
+<td class='step-details'>Calling verifylogin method for user: 1000260</td>
+</tr>
+<tr>
 <td class='status error' title='error' alt='error'><i class='mdi-alert-error'></i></td>
-<td class='timestamp'>01:01:54</td>
-<td class='step-details'>Exception occurred for user: 1000260.0 - Timed out after 10 seconds. Unable to locate the element</td>
+<td class='timestamp'>23:42:15</td>
+<td class='step-details'>Exception occurred while verifying login for user: 1000260 - Timed out after 10 seconds. Unable to locate the element</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:54</td>
+<td class='timestamp'>23:42:15</td>
 <td class='step-details'>Moving on to the next credentials</td>
 </tr>
 <tr>
-<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-<td class='timestamp'>01:02:24</td>
-<td class='step-details'><pre>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:42:15</td>
+<td class='step-details'>Test execution completed.</td>
 </tr>
 </tbody>
 </table>
@@ -645,17 +510,17 @@ at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerM
 </div>
 </div>
 </li>
-<li class='collection-item test displayed active fail ' extentid='bddfb061-bac4-448f-9a11-dc15121dd809'>
+<li class='collection-item test displayed active error ' extentid='5880e1f3-2b12-45db-811d-eeed0ed02bc3'>
 <div class='test-head'>
-<span class='test-name'>testcase01 - Verify login flow <i class='tooltipped mdi-alert-error' data-position='top' data-delay='50' data-tooltip='Close was called before test could end safely using EndTest.'></i></span>
-<span class='test-status label right outline capitalize fail'>fail</span>
+<span class='test-name'>testcase01 - Verify login flow </span>
+<span class='test-status label right outline capitalize error'>error</span>
 <span class='category-assigned hide '></span>
 </div>
 <div class='test-body'>
 <div class='test-info'>
-<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 01:01:54</span>
-<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 01:02:24</span>
-<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 29s+552ms</span>
+<span title='Test started time' alt='Test started time' class='test-started-time label green lighten-1 text-white'>2024-11-28 23:42:15</span>
+<span title='Test ended time' alt='Test ended time' class='test-ended-time label red lighten-1 text-white'>2024-11-28 23:42:42</span>
+<span title='Time taken to finish' alt='Time taken to finish' class='test-time-taken label blue-grey lighten-3 text-white'>0h 0m 27s+141ms</span>
 </div>
 <div class='test-desc'></div>
 <div class='test-attributes'>
@@ -672,79 +537,43 @@ at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerM
 <tbody>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:54</td>
+<td class='timestamp'>23:42:15</td>
 <td class='step-details'>Navigating to Homepage</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:55</td>
+<td class='timestamp'>23:42:16</td>
 <td class='step-details'>Navigating to Login page</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:01:58</td>
+<td class='timestamp'>23:42:18</td>
 <td class='step-details'>Login Header is displayed, proceeding with login</td>
 </tr>
 <tr>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:42:21</td>
+<td class='step-details'>Calling verifylogin method for user: 1000080</td>
+</tr>
+<tr>
 <td class='status error' title='error' alt='error'><i class='mdi-alert-error'></i></td>
-<td class='timestamp'>01:02:22</td>
-<td class='step-details'>Exception occurred for user: 1000080.0 - Timed out after 10 seconds. Unable to locate the element</td>
+<td class='timestamp'>23:42:42</td>
+<td class='step-details'>Exception occurred while verifying login for user: 1000080 - Timed out after 10 seconds. Unable to locate the element</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:02:22</td>
+<td class='timestamp'>23:42:42</td>
 <td class='step-details'>Moving on to the next credentials</td>
 </tr>
 <tr>
 <td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
-<td class='timestamp'>01:02:22</td>
-<td class='step-details'><img class='report-img' data-featherlight='../screenshots/EndOfTest_20241128_010222.png' src='../screenshots/EndOfTest_20241128_010222.png' /></td>
+<td class='timestamp'>23:42:42</td>
+<td class='step-details'>Test execution completed.</td>
 </tr>
 <tr>
-<td class='status fail' title='fail' alt='fail'><i class='mdi-navigation-cancel'></i></td>
-<td class='timestamp'>01:02:24</td>
-<td class='step-details'><pre>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
+<td class='status info' title='info' alt='info'><i class='mdi-action-info-outline'></i></td>
+<td class='timestamp'>23:42:43</td>
+<td class='step-details'><img class='report-img' data-featherlight='../screenshots/EndOfTest_20241128_234243.png' src='../screenshots/EndOfTest_20241128_234243.png' /></td>
 </tr>
 </tbody>
 </table>
@@ -774,291 +603,6 @@ at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerM
 <!-- /categories -->
 
 <!-- exceptions -->
-<div id='exceptions-view' class='row _addedTable hide'>
-<div class='col _addedCell1'>
-<div class='contents'>
-<div class='card-panel heading'>
-<h5>Defects</h5>
-</div>
-<div class='card-panel filters'>
-<div class='search' alt='Search tests' title='Search tests'>
-<div class='input-field left'>
-<input id='searchTests' type='text' class='validate' placeholder='Search tests...'>
-</div>
-<i class='mdi-action-search icon'></i>
-</div>
-</div>
-<div class='card-panel no-padding-h no-padding-v'>
-<div class='wrapper'>
-<ul id='exception-collection' class='exception-collection'>
-<li class='exception-item displayed'>
-<div class='exception-head'>
-<span class='exception-name'>com.relevantcodes.extentreports.ExtentTestInterruptedException</span>
-</div>
-<div class='exception-test-count'>
-<span class='fail label'>5</span>
-</div>
-<div class='exception-body'>
-<div class='exception-tests'>
-<table class='bordered'>
-<thead>
-<tr>
-<th>RunDate</th>
-<th>Test Name</th>
-<th>Exception</th>
-</tr>
-</thead>
-<tbody>
-<tr class='fail'>
-<td>2024-11-28 01:00:24</td>
-<td><span class='exception-link linked' extentid='bc6cdcbc-fde4-43b3-81d5-f4e470cd98fb'>testcase01 - Verify login flow</span></td>
-<td><pre class='exception-message'>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
-</tr>
-<tr class='fail'>
-<td>2024-11-28 01:00:35</td>
-<td><span class='exception-link linked' extentid='ac465538-0906-4d7d-a344-73aa559c3c3f'>testcase01 - Verify login flow</span></td>
-<td><pre class='exception-message'>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
-</tr>
-<tr class='fail'>
-<td>2024-11-28 01:01:00</td>
-<td><span class='exception-link linked' extentid='71305b25-9b14-43da-a84f-d772d4ea6022'>testcase01 - Verify login flow</span></td>
-<td><pre class='exception-message'>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
-</tr>
-<tr class='fail'>
-<td>2024-11-28 01:01:27</td>
-<td><span class='exception-link linked' extentid='e1334871-72ac-4091-9a70-3f820bbe1690'>testcase01 - Verify login flow</span></td>
-<td><pre class='exception-message'>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
-</tr>
-<tr class='fail'>
-<td>2024-11-28 01:01:54</td>
-<td><span class='exception-link linked' extentid='bddfb061-bac4-448f-9a11-dc15121dd809'>testcase01 - Verify login flow</span></td>
-<td><pre class='exception-message'>com.relevantcodes.extentreports.ExtentTestInterruptedException: Close was called before test could end safely using EndTest.
-at com.relevantcodes.extentreports.Report.terminate(Report.java:416)
-at com.relevantcodes.extentreports.ExtentReports.close(ExtentReports.java:708)
-at fedex_totalsales.Tests.BaseTest.teardownSuite(BaseTest.java:54)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:361)
-at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:296)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:400)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
-at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
-at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-at com.sun.proxy.$Proxy2.stop(Unknown Source)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100)
-at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60)
-at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113)
-at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
-</pre></td>
-</tr>
-<tbody>
-</table>
-</div>
-</div> 
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div id='exception-details-wrapper' class='col _addedCell2'>
-<div class='contents'>
-<div class='card-panel details-view'>
-<h5 class='exception-name'></h5>
-<div class='exception-container'>
-</div>
-</div>
-</div>
-</div>
-</div>
 <!-- /exceptions -->
 
 <!-- testrunner logs -->

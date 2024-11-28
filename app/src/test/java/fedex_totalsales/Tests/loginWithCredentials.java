@@ -17,44 +17,55 @@ public class loginWithCredentials extends BaseTest {
 
     @Test(dataProvider = "excelReading", dataProviderClass = DP.class, description = "Verify login functionality", groups = "sanity", priority = 1)
 
-    public void testcase01(String username, String password){
+    public void testcase01(String username, String password) {
         test = reports.startTest("testcase01 - Verify login flow");
-        try{
+        try {
             HomePage home = new HomePage(driver);
-            test.log(LogStatus.INFO,"Navigating to Homepage");
+            test.log(LogStatus.INFO, "Navigating to Homepage");
             home.navigationToHome();
-            test.log(LogStatus.INFO,"Navigating to Login page");
+            test.log(LogStatus.INFO, "Navigating to Login page");
             home.navigatetoSALogin();
 
             superAdminLogin login = new superAdminLogin(driver);
             login.isheaderdisplayed();
 
-            if(login.isheaderdisplayed()){
-                test.log(LogStatus.INFO,"Login Header is displayed, proceeding with login");
-                login.enterCredentials(username,password);
+            if (login.isheaderdisplayed()) {
+                test.log(LogStatus.INFO, "Login Header is displayed, proceeding with login");
+                login.enterCredentials(username, password);
                 login.Login();
                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-                if(home.verifylogin()){
-                    test.log(LogStatus.INFO, "Login successfull for user: " +username);
-                    home.logout();
-                    test.log(LogStatus.INFO, "Logged out successfully");
-                }
-                else {
-                    String errorMsg = login.geterror();
-                    test.log(LogStatus.FAIL, "Login failed for user: " + username + " with error: " + errorMsg);
-                }
+                // Adding a log here to check if verifylogin is being called
+                test.log(LogStatus.INFO, "Calling verifylogin method for user: " + username);
 
+                try {
+                    if (home.verifylogin()) {
+                        test.log(LogStatus.PASS, "Login successful for user: " + username);
+                        home.logout();
+                        test.log(LogStatus.INFO, "Logged out successfully");
+                    } else {
+                        test.log(LogStatus.INFO, "verifylogin returned false for user: " + username);
 
+                        String errorMsg = login.geterror();
+                        if (errorMsg != null && !errorMsg.isEmpty()) {
+                            test.log(LogStatus.FAIL, "Login failed for user: " + username + " with error: " + errorMsg);
+                        } else {
+                            test.log(LogStatus.FAIL, "Login failed for user: " + username + " with no error message.");
+                        }
+                    }
+                } catch (Exception e) {
+                    // This will catch any exception from verifylogin method
+                    test.log(LogStatus.ERROR, "Exception occurred while verifying login for user: " + username + " - " + e.getMessage());
+                }
+            } else {
+                test.log(LogStatus.FAIL, "Login Header is not displayed for user: " + username);
             }
 
-        }catch (Exception e){
+        } catch (Exception e) {
             test.log(LogStatus.ERROR, "Exception occurred for user: " + username + " - " + e.getMessage());
-
-        }finally {
+        } finally {
             test.log(LogStatus.INFO, "Moving on to the next credentials");
         }
-
     }
 
 }

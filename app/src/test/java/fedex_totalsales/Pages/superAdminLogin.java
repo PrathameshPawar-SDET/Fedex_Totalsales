@@ -17,9 +17,9 @@ public class superAdminLogin {
 
     WebDriver driver;
 
-    public superAdminLogin(WebDriver driver){
+    public superAdminLogin(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver,10), this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 5), this);
     }
 
     @FindBy(xpath = "//h3/b[text()='Super Admin Login']")
@@ -28,40 +28,39 @@ public class superAdminLogin {
     @FindBy(id = "username")
     private WebElement Username;
 
-    @FindBy(id="password")
+    @FindBy(id = "password")
     private WebElement Password;
 
     @FindBy(xpath = "//button[normalize-space()='SUBMIT']")
-    private WebElement SubmitButton;
+    public WebElement SubmitButton;
 
     @FindBy(className = "help-block")
     private WebElement errorMessage;
 
     WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+
     public boolean isheaderdisplayed() {
         try {
             wait.until(ExpectedConditions.visibilityOf(SALoginHeader));
             return this.SALoginHeader.isDisplayed();
-        }
-        catch(NoSuchElementException e){
+        } catch (NoSuchElementException e) {
             return false;
 
         }
     }
 
-    public void enterCredentials(String username, String password){
-        Wrapper.sendKeys(driver,this.Username, username);
+    public void enterCredentials(String username, String password) {
+        Wrapper.sendKeys(driver, this.Username, username);
         Wrapper.sendKeys(driver, this.Password, password);
     }
 
-    public void Login(){
+    public void Login() {
         Wrapper.click(this.SubmitButton, driver);
     }
 
-    public String geterror(){
+    public String geterror() {
         return this.errorMessage.getText();
     }
-
 
 
 }

@@ -4,6 +4,8 @@ import com.relevantcodes.extentreports.LogStatus;
 import fedex_totalsales.Pages.HomePage;
 import fedex_totalsales.Pages.superAdminLogin;
 import fedex_totalsales.Utilities.DP;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -41,6 +43,9 @@ public class loginWithCredentials extends BaseTest {
                 try {
                     if (home.verifylogin()) {
                         test.log(LogStatus.PASS, "Login successful for user: " + username);
+//                        wait.until(ExpectedConditions.visibilityOf(home.Employee_text));
+                        captureScreenshot("Successfulllogin", home.helpMe);
+//                        Thread.sleep(2000);
                         home.logout();
                         test.log(LogStatus.INFO, "Logged out successfully");
                     } else {
@@ -49,12 +54,13 @@ public class loginWithCredentials extends BaseTest {
                         String errorMsg = login.geterror();
                         if (errorMsg != null && !errorMsg.isEmpty()) {
                             test.log(LogStatus.FAIL, "Login failed for user: " + username + " with error: " + errorMsg);
+                            captureScreenshot("LoginFailedError", login.SubmitButton);
                         } else {
                             test.log(LogStatus.FAIL, "Login failed for user: " + username + " with no error message.");
+
                         }
                     }
                 } catch (Exception e) {
-                    // This will catch any exception from verifylogin method
                     test.log(LogStatus.ERROR, "Exception occurred while verifying login for user: " + username + " - " + e.getMessage());
                 }
             } else {

@@ -16,19 +16,19 @@ import org.testng.annotations.DataProvider;
 
 
 public class DP {
-    // TODO: use correct annotation to connect the Data Provider with your Test Cases
+
 
     @DataProvider(name = "excelReading")
 
     public Object[][] dpMethod(Method m) throws IOException {
         int rowIndex = 0;
         int cellIndex = 0;
-        List<List> outputList = new ArrayList<List>();
+        List<List> outputList = new ArrayList<>();
 
         // FileInputStream excelFile = new FileInputStream(new File(
         //         "<absolute-path-to-xlsx-file>"));
         FileInputStream excelFile = new FileInputStream(new File(
-                "D:\\Crio assignment\\Projects\\Fedex_Totalsales\\app\\src\\test\\java\\fedex_totalsales\\Data\\DatasetsforFedex.xlsx"));
+                "D:\\Projects\\Fedex_Totalsales\\app\\src\\test\\java\\fedex_totalsales\\Data\\DatasetsforFedex.xlsx"));
 
         XSSFWorkbook workbook = new XSSFWorkbook(excelFile);
         XSSFSheet selectedSheet = workbook.getSheet(m.getName());

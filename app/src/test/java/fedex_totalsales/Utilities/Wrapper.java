@@ -23,7 +23,7 @@ public class Wrapper {
             Actions act = new Actions(driver);
             act.moveToElement(elementToClick).perform();
 
-            Thread.sleep(500);
+//            Thread.sleep(500);
 
             act.click(elementToClick).perform();
             return true;

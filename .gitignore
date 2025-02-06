@@ -2,6 +2,8 @@
 .gradle
 
 app/src/test/java/fedex_totalsales/Data
+app/report
+app/screenshots
 
 
 # Ignore Gradle build output directory

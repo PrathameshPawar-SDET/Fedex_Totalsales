@@ -27,12 +27,12 @@ public class DriverSingleton {
             options.addArguments("--disable-gpu");
 
 
-            options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36");
+//            options.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36");
 
             driver = new ChromeDriver(options);
             System.out.println("Creating new ChromeDriver instance.");
         }
-        driver.manage().window().maximize();
+//        driver.manage().window().maximize();
 
         return driver;
     }

@@ -12,17 +12,18 @@ import javax.xml.xpath.XPath;
 public class HomePage {
     WebDriver driver;
 
-    public  HomePage(WebDriver driver){
+    public HomePage(WebDriver driver) {
         this.driver = driver;
-        PageFactory.initElements(new AjaxElementLocatorFactory(driver,10), this);
+        PageFactory.initElements(new AjaxElementLocatorFactory(driver, 5), this);
     }
 
-    String homeURL = "https://fedex-staging.totalsales.com/";
+        String homeURL = "https://fedex.totalsales.com/";
+//    String homeURL = "https://fedex-staging.totalsales.com/";
 //    String homeURL = "https://fedexdev.totalsales.com/";
 
 
     @FindBy(xpath = "//a[text()='HOME']")
-    private  WebElement Home;
+    private WebElement Home;
 
     @FindBy(xpath = "//a[text()='AWARD LEVELS ']")
     private WebElement Award_level;
@@ -63,8 +64,8 @@ public class HomePage {
     @FindBy(className = "input-group-addon")
     private WebElement SearchButton;
 
-    @FindBy(xpath="//a[text()='HELP ME']")
-    private WebElement helpMe;
+    @FindBy(xpath = "//a[text()='HELP ME']")
+    public WebElement helpMe;
 
     @FindBy(xpath = "//a[text()='VIEW CART']")
     private WebElement viewCart;
@@ -76,52 +77,43 @@ public class HomePage {
     private WebElement logout;
 
     @FindBy(xpath = "//p[contains(text(), 'Employee Number:')]")
-    private WebElement Employee_text;
+    public WebElement Employee_text;
 
-    public void navigationToHome(){
-        Wrapper.navigate(driver,homeURL);
+    public void navigationToHome() {
+        Wrapper.navigate(driver, homeURL);
     }
 
-    public void searchProduct(String Product) throws InterruptedException{
+    public void searchProduct(String Product) throws InterruptedException {
         Search.clear();
         Thread.sleep(3000);
         Wrapper.sendKeys(driver, this.Search, Product);
     }
 
-    public void SearchButton(){
+    public void SearchButton() {
         Wrapper.click(this.SearchButton, driver);
     }
 
-    public void helpme(){
-        Wrapper.click(this.helpMe,driver);
+    public void helpme() {
+        Wrapper.click(this.helpMe, driver);
     }
 
-    public void navigatetoSALogin(){
+    public void navigatetoSALogin() {
         Wrapper.click(this.SALogin, driver);
     }
 
-    public boolean verifylogin(){
-        return this.Employee_text.isDisplayed();
+    public boolean verifylogin() {
+        try {
+
+            return this.Employee_text.isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
-    public void logout(){
+    public void logout() {
         this.myAccount.click();
         this.logout.click();
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

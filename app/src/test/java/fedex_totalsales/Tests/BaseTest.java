@@ -1,12 +1,10 @@
 package fedex_totalsales.Tests;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import fedex_totalsales.Utilities.DriverSingleton;
 import fedex_totalsales.Utilities.ReportSingleton;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.*;
 
@@ -26,8 +24,10 @@ public class BaseTest {
     public void setupSuite() throws MalformedURLException, InterruptedException {
         driver = DriverSingleton.getdriver();
         reports = ReportSingleton.getReport();
+//        driver.get("https://fedex.totalsales.com/");
         driver.get("https://fedex-staging.totalsales.com/");
 //        driver.get("https://fedexdev.totalsales.com/");
+
         Thread.sleep(2000);
     }
 
@@ -41,6 +41,11 @@ public class BaseTest {
 //
 //    }
 
+//    @AfterTest(alwaysRun = true)
+//    public void takescreenshot(){
+//        captureScreenshot("End of Test");
+//    }
+
     @AfterMethod(alwaysRun = true)
     public void afterMethod() {
         if (test != null) {
@@ -51,22 +56,28 @@ public class BaseTest {
 
     @AfterSuite(alwaysRun = true)
     public void teardownSuite() {
-        captureScreenshot("EndOfTest");
+        // Close the WebDriver instance
         if (driver != null) {
-            driver.quit();
-        }
-        if (reports != null) {
             try {
-                reports.flush();
-                reports.close();
+                driver.quit();
             } catch (Exception e) {
-                e.printStackTrace();
-                test.log(LogStatus.ERROR, "Error while closing ExtentReports: " + e.getMessage());
+                System.err.println("Error while closing WebDriver: " + e.getMessage());
+                if (test != null) {
+                    test.log(LogStatus.ERROR, "Error while closing WebDriver: " + e.getMessage());
+                }
             }
         }
-    }
 
-    protected void captureScreenshot(String screenshotName) {
+        // Close the ExtentReports instance
+        ReportSingleton.closeReport();
+    }
+    protected void captureScreenshot(String screenshotName, WebElement element) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        try {
+            Thread.sleep(500); // Adjust the sleep time as needed
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         try {
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());

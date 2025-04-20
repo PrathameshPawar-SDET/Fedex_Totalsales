@@ -18,59 +18,49 @@ public class loginWithCredentials extends BaseTest {
 
 
     @Test(dataProvider = "excelReading", dataProviderClass = DP.class, description = "Verify login functionality", groups = "sanity", priority = 1)
-
     public void testcase01(String username, String password) {
-        test = reports.startTest("testcase01 - Verify login flow");
+        test = reports.startTest("testcase01 - Verify login for user: " + username);
         try {
             HomePage home = new HomePage(driver);
-            test.log(LogStatus.INFO, "Navigating to Homepage");
             home.navigationToHome();
-            test.log(LogStatus.INFO, "Navigating to Login page");
+            test.log(LogStatus.INFO, "Navigated to Homepage");
+
             home.navigatetoSALogin();
+            test.log(LogStatus.INFO, "Navigated to Super Admin Login page");
 
             superAdminLogin login = new superAdminLogin(driver);
-            login.isheaderdisplayed();
-
             if (login.isheaderdisplayed()) {
-                test.log(LogStatus.INFO, "Login Header is displayed, proceeding with login");
+                test.log(LogStatus.INFO, "Login header visible, entering credentials");
                 login.enterCredentials(username, password);
                 login.Login();
-                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
-                // Adding a log here to check if verifylogin is being called
-                test.log(LogStatus.INFO, "Calling verifylogin method for user: " + username);
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
                 try {
                     if (home.verifylogin()) {
                         test.log(LogStatus.PASS, "Login successful for user: " + username);
-//                        wait.until(ExpectedConditions.visibilityOf(home.Employee_text));
-                        captureScreenshot("Successfulllogin", home.helpMe);
-//                        Thread.sleep(2000);
+                        captureScreenshot("SuccessfulLogin", home.helpMe);
                         home.logout();
                         test.log(LogStatus.INFO, "Logged out successfully");
                     } else {
-                        test.log(LogStatus.INFO, "verifylogin returned false for user: " + username);
-
                         String errorMsg = login.geterror();
                         if (errorMsg != null && !errorMsg.isEmpty()) {
-                            test.log(LogStatus.FAIL, "Login failed for user: " + username + " with error: " + errorMsg);
-                            captureScreenshot("LoginFailedError", login.SubmitButton);
+                            test.log(LogStatus.FAIL, "Login failed with error: " + errorMsg);
+                            captureScreenshot("LoginFailed", login.SubmitButton);
                         } else {
-                            test.log(LogStatus.FAIL, "Login failed for user: " + username + " with no error message.");
-
+                            test.log(LogStatus.FAIL, "Login failed with no visible error message.");
                         }
                     }
                 } catch (Exception e) {
-                    test.log(LogStatus.ERROR, "Exception occurred while verifying login for user: " + username + " - " + e.getMessage());
+                    test.log(LogStatus.ERROR, "Error verifying login for user: " + username + " - " + e.getMessage());
                 }
             } else {
-                test.log(LogStatus.FAIL, "Login Header is not displayed for user: " + username);
+                test.log(LogStatus.FAIL, "Login header not displayed for user: " + username);
             }
-
         } catch (Exception e) {
-            test.log(LogStatus.ERROR, "Exception occurred for user: " + username + " - " + e.getMessage());
+            test.log(LogStatus.ERROR, "Unexpected exception for user: " + username + " - " + e.getMessage());
         } finally {
-            test.log(LogStatus.INFO, "Moving on to the next credentials");
+            test.log(LogStatus.INFO, "Finished execution for user: " + username);
         }
     }
 

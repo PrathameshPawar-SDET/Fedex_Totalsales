@@ -21,6 +21,9 @@ public class ReportSingleton {
             report.flush();
             report.close();
             report = null; // Reset the report instance to avoid reuse
+        } else {
+            System.err.println("Warning: Report instance is already null. Nothing to close.");
         }
     }
+
 }

@@ -17,8 +17,8 @@ public class HomePage {
         PageFactory.initElements(new AjaxElementLocatorFactory(driver, 5), this);
     }
 
-        String homeURL = "https://fedex.totalsales.com/";
-//    String homeURL = "https://fedex-staging.totalsales.com/";
+//        String homeURL = "https://fedex.totalsales.com/";
+    String homeURL = "https://fedex-staging.totalsales.com/";
 //    String homeURL = "https://fedexdev.totalsales.com/";
 
 

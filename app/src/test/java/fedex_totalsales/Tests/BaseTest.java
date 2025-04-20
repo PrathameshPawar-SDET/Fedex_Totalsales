@@ -1,13 +1,10 @@
 package fedex_totalsales.Tests;
+
 import org.openqa.selenium.*;
 import fedex_totalsales.Utilities.DriverSingleton;
 import fedex_totalsales.Utilities.ReportSingleton;
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import com.relevantcodes.extentreports.*;
 import org.testng.annotations.*;
-
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -21,42 +18,26 @@ public class BaseTest {
     protected ExtentTest test;
 
     @BeforeTest(alwaysRun = true)
-    public void setupSuite() throws MalformedURLException, InterruptedException {
+    public void setupSuite() throws MalformedURLException {
         driver = DriverSingleton.getdriver();
         reports = ReportSingleton.getReport();
-//        driver.get("https://fedex.totalsales.com/");
+        if (reports == null) {
+            throw new RuntimeException("Failed to initialize ExtentReports.");
+        }
         driver.get("https://fedex-staging.totalsales.com/");
-//        driver.get("https://fedexdev.totalsales.com/");
-
-        Thread.sleep(2000);
     }
-
-//    @BeforeClass(alwaysRun = true)
-//    public void setup() {
-//
-//    }
-
-//    @AfterClass(alwaysRun = true)
-//    public void teardown() {
-//
-//    }
-
-//    @AfterTest(alwaysRun = true)
-//    public void takescreenshot(){
-//        captureScreenshot("End of Test");
-//    }
 
     @AfterMethod(alwaysRun = true)
     public void afterMethod() {
         if (test != null) {
             test.log(LogStatus.INFO, "Test execution completed.");
-            reports.endTest(test);  // End the test in the report
+            reports.endTest(test);
         }
     }
 
     @AfterSuite(alwaysRun = true)
     public void teardownSuite() {
-        // Close the WebDriver instance
+        System.out.println("teardownSuite() started.");
         if (driver != null) {
             try {
                 driver.quit();
@@ -67,25 +48,24 @@ public class BaseTest {
                 }
             }
         }
-
-        // Close the ExtentReports instance
-        ReportSingleton.closeReport();
-    }
-    protected void captureScreenshot(String screenshotName, WebElement element) {
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-        try {
-            Thread.sleep(500); // Adjust the sleep time as needed
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        if (reports != null) {
+            ReportSingleton.closeReport();
         }
-        File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+    }
+
+
+    protected void captureScreenshot(String screenshotName, WebElement element) {
         try {
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+            Thread.sleep(500);
+            File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
             String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-            String filePath = "screenshots/" + screenshotName + "_" + timestamp + ".png";
+            String screenshotDir = "screenshots/";
+            new File(screenshotDir).mkdirs();  // Ensure directory exists
+            String filePath = screenshotDir + screenshotName + "_" + timestamp + ".png";
             FileUtils.copyFile(srcFile, new File(filePath));
-            test.log(LogStatus.INFO, "Screenshot captured: " + screenshotName,
-                    test.addScreenCapture("../" + filePath));
-        } catch (IOException e) {
+            test.log(LogStatus.INFO, "Screenshot captured: " + screenshotName, test.addScreenCapture("../" + filePath));
+        } catch (Exception e) {
             test.log(LogStatus.ERROR, "Error while capturing screenshot: " + e.getMessage());
         }
     }

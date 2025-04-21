@@ -48,9 +48,9 @@ public class BaseTest {
                 }
             }
         }
-        if (reports != null) {
-            ReportSingleton.closeReport();
-        }
+//        if (reports != null) {
+//            ReportSingleton.closeReport();
+//        }
     }
 
 
